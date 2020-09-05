@@ -3,4 +3,5 @@ tmp/
 coverage
 node_modules
 ormconfig.json
-!tmp/.gitkeep
+!tmp/uploads/.gitkeep
+.vscode

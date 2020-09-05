@@ -4,7 +4,7 @@ import { celebrate, Segments, Joi } from 'celebrate';
 
 import uploadConfig from '@config/upload';
 
-import ensureUserAuthentication from '@shared/infra/http/middleware/ensureUserAuthentication';
+import ensureUserAuthentication from '@modules/users/infra/http/middleware/ensureUserAuthentication';
 import UsersController from '../controllers/UsersController';
 import AvatarUserController from '../controllers/AvatarUserController';
 

@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { celebrate, Segments, Joi } from 'celebrate';
 
-import ensureUserAuthentication from '@shared/infra/http/middleware/ensureUserAuthentication';
+import ensureUserAuthentication from '@modules/users/infra/http/middleware/ensureUserAuthentication';
 import ProfilesController from '../controllers/ProfilesController';
 
 const userRoutes = Router();
