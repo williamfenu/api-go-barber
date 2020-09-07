@@ -61,6 +61,7 @@ export default class CreateRepositoryService {
 
         const findAppointInSameHour = await this.appointmentRepository.findByDate(
             formatedDate,
+            providerId,
         );
 
         if (findAppointInSameHour) {
