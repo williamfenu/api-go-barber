@@ -18,11 +18,12 @@ export default class ProfilesController {
         request: Request,
         response: Response,
     ): Promise<Response> {
-        const { userId, name, email, oldPassword, password } = request.body;
+        const { id } = request.user;
+        const { name, email, oldPassword, password } = request.body;
         const profileService = container.resolve(UpdateProfileService);
 
         const updatedUser = await profileService.execute({
-            userId,
+            userId: id,
             name,
             email,
             oldPassword,

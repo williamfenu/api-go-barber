@@ -7,7 +7,7 @@ import INotificationsRepository from '@modules/notifications/repositories/INotif
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
-interface Request {
+interface IRequest {
     providerId: string;
     userId: string;
     date: Date;
@@ -40,7 +40,7 @@ export default class CreateRepositoryService {
         providerId,
         userId,
         date,
-    }: Request): Promise<Appointment> {
+    }: IRequest): Promise<Appointment> {
         if (providerId === userId) {
             throw new AppError(
                 'A provider cannot book an appointment with yourself',

@@ -15,8 +15,8 @@ userRoutes.put(
     '/',
     celebrate({
         [Segments.BODY]: {
-            userId: Joi.string().uuid().required(),
             email: Joi.string().email().required(),
+            name: Joi.string().required(),
             password: Joi.string(),
             oldPassword: Joi.string(),
             confirmationPassword: Joi.string().valid(Joi.ref('password')),
