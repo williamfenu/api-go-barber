@@ -17,8 +17,8 @@ userRoutes.put(
         [Segments.BODY]: {
             email: Joi.string().email().required(),
             name: Joi.string().required(),
-            password: Joi.string(),
-            oldPassword: Joi.string(),
+            password: Joi.string().allow('').optional(),
+            oldPassword: Joi.string().allow('').optional(),
             confirmationPassword: Joi.string().valid(Joi.ref('password')),
         },
     }),

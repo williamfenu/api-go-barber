@@ -42,7 +42,6 @@ export default class UpdateUserAvatarService {
         const savedAvatar = await this.storageProvider.saveFile(avatar);
         user.avatar = savedAvatar;
         await this.userRepository.save(user);
-        delete user.password;
 
         return user;
     }
