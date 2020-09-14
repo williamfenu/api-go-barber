@@ -82,7 +82,10 @@ export default class CreateRepositoryService {
         });
 
         this.cacheProvider.invalidate(
-            `provider-appointments:${format(formatedDate, 'yyyy-M-d')}`,
+            `provider-appointments:${providerId}:${format(
+                formatedDate,
+                'yyyy-M-d',
+            )}`,
         );
         return appointment;
     }
