@@ -49,6 +49,7 @@ export default class CreateUserService {
             name,
             email,
             password: hashPassword,
+            avatar: 'no-image.png',
         });
 
         this.cacheProvider.invalidatePrefix('providers-list');

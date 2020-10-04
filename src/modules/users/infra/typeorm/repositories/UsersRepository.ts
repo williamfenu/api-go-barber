@@ -28,11 +28,13 @@ export default class UserRepository implements IUsersRepository {
         name,
         email,
         password,
+        avatar,
     }: ICreateUserDTO): Promise<User> {
         const userCreated = this.ormRepository.create({
             name,
             email,
             password,
+            avatar,
         });
 
         const user = await this.save(userCreated);
